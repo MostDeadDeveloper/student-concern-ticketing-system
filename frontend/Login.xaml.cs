@@ -26,12 +26,12 @@ namespace frontend
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e){
-            // this.Hide();
-            // Profile li = new Profile();
-            // li.Show();
-            if (sender != null){
-                MessageBoxResult result = MessageBox.Show("You clicked Login :D", "Login", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+            this.Hide();
+            Profile win = new Profile();
+            win.Show();
+            // if (sender != null){
+            //     MessageBoxResult result = MessageBox.Show("You clicked Login :D", "Login", MessageBoxButton.OK, MessageBoxImage.Information);
+            // }
         }
 
         private void btnSignup_Click(object sender, RoutedEventArgs e){
