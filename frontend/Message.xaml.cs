@@ -18,9 +18,9 @@ namespace student_concern_ticketing_system
     /// <summary>
     /// Interaction logic for Profle.xaml
     /// </summary>
-    public partial class Profile : UserControl
+    public partial class Message : UserControl
     {
-        public Profile(){
+        public Message(){
             // InitializeComponent();
             
         }
