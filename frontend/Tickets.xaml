@@ -1,4 +1,4 @@
-<UserControl x:Class="student_concern_ticketing_system.Profile"
+<UserControl x:Class="student_concern_ticketing_system.Tickets"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Height="450" Width="600">
     <Grid>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">This is the Profile Page</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">This is the tickets Page</TextBlock>
     </Grid>
 </UserControl>
