@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using app.Services;
+using student_concern_ticketing_system.frontend.Services;
 
-namespace app.ViewModels
+namespace student_concern_ticketing_system.frontend.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {
