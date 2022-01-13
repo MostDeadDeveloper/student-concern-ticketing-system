@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ReactiveUI;
 
-namespace app.ViewModels
+namespace student_concern_ticketing_system.frontend.ViewModels
 {
     public class ViewModelBase : ReactiveObject
     {
