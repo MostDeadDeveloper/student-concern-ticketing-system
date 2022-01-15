@@ -6,9 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="student_concern_ticketing_system.frontend.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/frontend/Assets/avalonia-logo.ico"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
+        Background="White"
         Title="Student Concern Ticketing System">
 
    <Design.DataContext>
@@ -17,15 +17,22 @@
 
    <!-- Main Panel -->
    <DockPanel>
+        <!-- Panel for Menubar  -->
+       <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
+           <views:TopMenubar/>
+
+       </StackPanel>
+
        <!-- Panel for Sidebar  -->
-       <StackPanel Spacing="5" Width="300" DockPanel.Dock="Left">
+       <StackPanel Spacing="10" Width="80" Background="LightBlue" DockPanel.Dock="Left">
            <views:NavigationSidebar/>
 
        </StackPanel>
 
        <!-- Panel for Content  -->
        <Panel DockPanel.Dock="Left">
-        <Rectangle Fill="Red"/>
+        <Rectangle Fill="White"/>
+        <ContentControl Content="{Binding Content}" />
        </Panel>
 
    </DockPanel>
