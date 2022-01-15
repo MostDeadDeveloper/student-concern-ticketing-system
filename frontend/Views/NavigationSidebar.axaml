@@ -1,0 +1,57 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="student_concern_ticketing_system.frontend.Views.NavigationSidebar">
+
+  <StackPanel>
+    <StackPanel.Styles>
+      <!-- Style settings of home button -->
+      <Style Selector="Button.HomeBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src  -->
+              <ImageBrush Source="/frontend/Assets/home.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+      <!-- Style settings of ticket button -->
+      <Style Selector="Button.TicketBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src -->
+              <ImageBrush Source="/frontend/Assets/ticket.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+      <!-- Style settings of reports button -->
+      <Style Selector="Button.ReportBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src -->
+              <ImageBrush Source="/frontend/Assets/report.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+    </StackPanel.Styles>
+    <Button DockPanel.Dock="Left" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
+    <Button DockPanel.Dock="Left" Classes="TicketBtn" Command="{Binding OnClickCommand}"/>
+    <Button DockPanel.Dock="Left" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
+  </StackPanel>
+</UserControl>

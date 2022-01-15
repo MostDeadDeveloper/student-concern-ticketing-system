@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:student_concern_ticketing_system.frontend.ViewModels"
+        xmlns:views="using:student_concern_ticketing_system.frontend.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="student_concern_ticketing_system.frontend.Views.MainWindow"
+        Icon="/frontend/Assets/avalonia-logo.ico"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="White"
+        Title="Student Concern Ticketing System">
+
+   <Design.DataContext>
+       <vm:MainWindowViewModel />
+   </Design.DataContext>
+
+   <!-- Main Panel -->
+   <DockPanel>
+        <!-- Panel for Menubar  -->
+       <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
+           <views:TopMenubar/>
+
+       </StackPanel>
+
+       <!-- Panel for Sidebar  -->
+       <StackPanel Spacing="10" Width="80" Background="LightBlue" DockPanel.Dock="Left">
+           <views:NavigationSidebar/>
+
+       </StackPanel>
+
+       <!-- Panel for Content  -->
+       <Panel DockPanel.Dock="Left">
+        <Rectangle Fill="White"/>
+        <ContentControl Content="{Binding Content}" />
+       </Panel>
+
+   </DockPanel>
+</Window>
