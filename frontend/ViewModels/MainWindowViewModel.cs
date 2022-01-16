@@ -32,10 +32,24 @@ namespace student_concern_ticketing_system.frontend.ViewModels
             Content = new HomeViewModel();
         }
 
+        public void TicketView()
+        {
+            //do something
+        }
+
         public void ReportView()
         {
             Content = new ReportViewModel();
         }
-  
+
+        public void LoginView()
+        {
+            Content = new LoginViewModel();
+        }
+
+        public void SignupView()
+        {
+            Content = new SignupViewModel();
+        }
     }
 }

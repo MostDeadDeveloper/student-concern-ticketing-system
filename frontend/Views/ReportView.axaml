@@ -5,7 +5,9 @@
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="student_concern_ticketing_system.frontend.Views.ReportView">
   <DockPanel>
-    <Label  x:Name="{Binding Reports}"
+    <Label  HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="{Binding Reports}"
             Content="This is the Reports View"/>
   </DockPanel>
 </UserControl>

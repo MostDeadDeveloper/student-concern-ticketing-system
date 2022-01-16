@@ -52,6 +52,6 @@
       </WrapPanel.Styles>
     <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding OnClickCommand}" />
     <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding OnClickCommand}"/>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" Command="{Binding OnClickCommand}"/>
+    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
   </WrapPanel>
 </UserControl>

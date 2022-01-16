@@ -5,10 +5,9 @@
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="student_concern_ticketing_system.frontend.Views.HomeView">
   <DockPanel>
-    <Button DockPanel.Dock="Bottom">Cancel</Button>
-    <Button DockPanel.Dock="Bottom">OK</Button>
-    <TextBox AcceptsReturn="False"
-             Text="{Binding Description}"
-             Watermark="This is Home View"/>
+    <Label  HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="{Binding Home}"
+            Content="This is the Home View"/>
   </DockPanel>
 </UserControl>
