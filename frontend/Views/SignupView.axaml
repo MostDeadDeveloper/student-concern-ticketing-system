@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             x:Class="student_concern_ticketing_system.frontend.Views.SignupView">
+    
+    <StackPanel Spacing="5" HorizontalAlignment="Center"
+             VerticalAlignment="Center">
+        <TextBox Width="160"
+                 Height="22"
+                 Watermark="First Name"
+                 TextAlignment="Center"
+                 Text="{Binding FirstName}" />
+
+        <TextBox Width="160"
+                Height="22"
+                Watermark="Last Name"
+                TextAlignment="Center"
+                Text="{Binding LastName}" />
+
+        <TextBox Width="160"
+                Height="22"
+                Watermark="Email"
+                TextAlignment="Center"
+                Text="{Binding Email}" />
+
+        <TextBox Width="160"
+                Height="22"
+                Watermark="Password"
+                TextAlignment="Center"
+                Text="{Binding Password}" />
+
+        <TextBox Width="160"
+                Height="22"
+                Watermark="Confirm Password"
+                TextAlignment="Center"
+                Text="{Binding ConPass}" />
+                
+        <Button DockPanel.Dock="Right"
+                Content="Signup"
+                Width="75"
+                Height="30"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center" 
+                Command="{Binding $parent[Window].DataContext.LoginView}"/>
+    </StackPanel>
+</UserControl>
