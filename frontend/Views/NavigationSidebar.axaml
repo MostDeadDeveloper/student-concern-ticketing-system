@@ -4,9 +4,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="app.Views.NavigationSidebar">
+
   <StackPanel>
-    <Button DockPanel.Dock="Left">Option #1</Button>
-    <Button DockPanel.Dock="Left">Option #2</Button>
-    <Button DockPanel.Dock="Left">Option #3</Button>
+    <StackPanel.Styles>
+      <!-- Style settings of home button -->
+      <Style Selector="Button.HomeBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src  -->
+              <ImageBrush Source="/Assets/home.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+      <!-- Style settings of ticket button -->
+      <Style Selector="Button.TicketBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src -->
+              <ImageBrush Source="/Assets/ticket.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+      <!-- Style settings of reports button -->
+      <Style Selector="Button.ReportBtn">
+          <Setter Property="Width" Value="80" />
+          <Setter Property="Height" Value="80" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src -->
+              <ImageBrush Source="/Assets/report.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+    </StackPanel.Styles>
+    <Button DockPanel.Dock="Left" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
+    <Button DockPanel.Dock="Left" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.TicketView}"/>
+    <Button DockPanel.Dock="Left" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
   </StackPanel>
 </UserControl>

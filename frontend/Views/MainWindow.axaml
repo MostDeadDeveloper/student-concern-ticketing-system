@@ -8,8 +8,8 @@
         x:Class="app.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
-        Title="app">
+        Background="White"
+        Title="Student Concern Ticketing System">
 
    <Design.DataContext>
        <vm:MainWindowViewModel />
@@ -17,15 +17,22 @@
 
    <!-- Main Panel -->
    <DockPanel>
+        <!-- Panel for Menubar  -->
+       <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
+           <views:TopMenubar/>
+
+       </StackPanel>
+
        <!-- Panel for Sidebar  -->
-       <StackPanel Spacing="5" Width="300" DockPanel.Dock="Left">
+       <StackPanel Spacing="10" Width="80" Background="LightBlue" DockPanel.Dock="Left">
            <views:NavigationSidebar/>
 
        </StackPanel>
 
        <!-- Panel for Content  -->
        <Panel DockPanel.Dock="Left">
-        <Rectangle Fill="Red"/>
+        <Rectangle Fill="White"/>
+        <ContentControl Content="{Binding Content}" />
        </Panel>
 
    </DockPanel>
