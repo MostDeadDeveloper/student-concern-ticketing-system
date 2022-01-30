@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             x:Class="student_concern_ticketing_system.frontend.Views.LoginView">
+
+    <StackPanel Spacing="5" HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <Ellipse Classes="shProfile" Width="140"
+                Height="130"
+                Stroke="Gray"
+                StrokeThickness="2"> 
+                    <Ellipse.Fill> 
+                            <ImageBrush Source="/frontend/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
+                    </Ellipse.Fill>
+        </Ellipse>
+
+        <TextBox Width="120"
+                Height="22"
+                Watermark="Email"
+                TextAlignment="Center"
+                Text="{Binding txtEmail}" />
+
+        <TextBox Width="120"
+                Height="22"
+                Watermark="Password"
+                TextAlignment="Center"
+                Text="{Binding txtPassword}"/>
+
+        <Button DockPanel.Dock="Right" Content="Login"
+                Width="75"
+                Height="30"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Command="{Binding $parent[Window].DataContext.HomeView}"/>
+
+        <Button DockPanel.Dock="Right" Content="Signup"
+                Width="70"
+                Height="30"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Command="{Binding $parent[Window].DataContext.SignupView}"/>
+    </StackPanel>
+</UserControl> 

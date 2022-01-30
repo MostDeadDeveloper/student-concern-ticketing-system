@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using app.Models;
+using student_concern_ticketing_system.frontend.Models;
 
-namespace app.ViewModels
+namespace student_concern_ticketing_system.frontend.ViewModels
 {
     public class TicketListViewModel : ViewModelBase
     {

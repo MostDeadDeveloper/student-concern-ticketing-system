@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace app.Views
+namespace student_concern_ticketing_system.frontend.Views
 {
     public partial class MainWindow : Window
     {
