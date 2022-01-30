@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using ReactiveUI;
-using student_concern_ticketing_system.frontend.Services;
+using app.Services;
 
-namespace student_concern_ticketing_system.frontend.ViewModels
+namespace app.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {

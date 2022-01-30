@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="student_concern_ticketing_system.frontend.Views.NavigationSidebar">
+             x:Class="app.Views.NavigationSidebar">
 
   <StackPanel>
     <StackPanel.Styles>
@@ -17,7 +17,7 @@
           <Setter Property="Background">
             <Setter.Value>
                           <!-- img src  -->
-              <ImageBrush Source="/frontend/Assets/home.png" />
+              <ImageBrush Source="/Assets/home.png" />
             </Setter.Value>
           </Setter>
       </Style>
@@ -31,7 +31,7 @@
           <Setter Property="Background">
             <Setter.Value>
                           <!-- img src -->
-              <ImageBrush Source="/frontend/Assets/ticket.png" />
+              <ImageBrush Source="/Assets/ticket.png" />
             </Setter.Value>
           </Setter>
       </Style>
@@ -45,7 +45,7 @@
           <Setter Property="Background">
             <Setter.Value>
                           <!-- img src -->
-              <ImageBrush Source="/frontend/Assets/report.png" />
+              <ImageBrush Source="/Assets/report.png" />
             </Setter.Value>
           </Setter>
       </Style>

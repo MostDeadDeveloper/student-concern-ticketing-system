@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using student_concern_ticketing_system.frontend.ViewModels;
+using app.ViewModels;
 
-namespace student_concern_ticketing_system
+namespace app
 {
     public class ViewLocator : IDataTemplate
     {

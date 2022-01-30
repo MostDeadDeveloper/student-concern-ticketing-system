@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
-             x:Class="student_concern_ticketing_system.frontend.Views.LoginView">
+             x:Class="app.Views.LoginView">
 
     <StackPanel Spacing="5" HorizontalAlignment="Center"
                 VerticalAlignment="Center">
@@ -12,7 +12,7 @@
                 Stroke="Gray"
                 StrokeThickness="2"> 
                     <Ellipse.Fill> 
-                            <ImageBrush Source="/frontend/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
+                            <ImageBrush Source="/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
                     </Ellipse.Fill>
         </Ellipse>
 

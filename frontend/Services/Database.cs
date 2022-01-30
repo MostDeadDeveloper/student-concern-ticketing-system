@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using student_concern_ticketing_system.frontend.Models;
+using app.Models;
 
-namespace student_concern_ticketing_system.frontend.Services
+namespace app.Services
 {
     public class Database
     {

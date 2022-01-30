@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace student_concern_ticketing_system.frontend.Views
+namespace app.Views
 {
     public partial class SignupView : UserControl
     {

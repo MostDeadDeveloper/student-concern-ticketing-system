@@ -1,11 +1,11 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using student_concern_ticketing_system.frontend.ViewModels;
-using student_concern_ticketing_system.frontend.Views;
-using student_concern_ticketing_system.frontend.Services;
+using app.ViewModels;
+using app.Views;
+using app.Services;
 
-namespace student_concern_ticketing_system
+namespace app
 {
     public class App : Application
     {

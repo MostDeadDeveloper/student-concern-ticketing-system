@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 
-namespace student_concern_ticketing_system.frontend.Views
+namespace app.Views
 {
     public partial class TopMenubar : UserControl
     {

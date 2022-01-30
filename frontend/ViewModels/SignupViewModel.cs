@@ -1,4 +1,4 @@
-namespace student_concern_ticketing_system.frontend.ViewModels
+namespace app.ViewModels
 {
     class SignupViewModel : ViewModelBase
     {

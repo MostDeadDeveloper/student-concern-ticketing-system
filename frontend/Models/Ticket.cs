@@ -1,4 +1,5 @@
-namespace student_concern_ticketing_system.frontend.Models
+namespace app.Models
+
 {
     public class Ticket
     {
