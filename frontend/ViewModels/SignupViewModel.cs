@@ -8,4 +8,4 @@ namespace student_concern_ticketing_system.frontend.ViewModels
         public string? Password { get; set; }
         public string? ConPass { get; set; }
     }
-}
+} 

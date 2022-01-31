@@ -16,4 +16,5 @@ namespace student_concern_ticketing_system.frontend.Views
             AvaloniaXamlLoader.Load(this);
         }
     }
-}
+} 
+

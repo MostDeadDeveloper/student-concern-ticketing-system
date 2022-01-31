@@ -21,7 +21,7 @@
                 Watermark="Email"
                 TextAlignment="Center"
                 Text="{Binding txtEmail}" />
-                
+
         <TextBox Width="120"
                 Height="22"
                 Watermark="Password"
@@ -42,4 +42,4 @@
                 HorizontalContentAlignment="Center"
                 Command="{Binding $parent[Window].DataContext.SignupView}"/>
     </StackPanel>
-</UserControl>
+</UserControl> 

@@ -4,4 +4,5 @@ namespace student_concern_ticketing_system.frontend.ViewModels
     {
         public string? Reports { get; }
     }
-}
+} 
+

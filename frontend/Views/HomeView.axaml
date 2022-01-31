@@ -10,4 +10,5 @@
             x:Name="{Binding Home}"
             Content="This is the Home View"/>
   </DockPanel>
-</UserControl>
+</UserControl> 
+
