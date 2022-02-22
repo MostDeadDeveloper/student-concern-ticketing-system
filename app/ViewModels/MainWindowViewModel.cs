@@ -10,7 +10,8 @@ namespace app.ViewModels
     {
         public MainWindowViewModel(Database db)
         {
-            Content = List = new TicketListViewModel(db.GetItems());
+            List = new TicketListViewModel(db.GetItems());
+            StartView();
         }
 
         public TicketListViewModel List { get; }
@@ -21,12 +22,17 @@ namespace app.ViewModels
         }
 
         ViewModelBase content;
+        
         public ViewModelBase Content
         {
             get => content;
             private set => this.RaiseAndSetIfChanged(ref content, value);
         }
 
+        public void StartView()
+        {
+            Content = new StartViewModel();
+        }
         public void HomeView()
         {
             Content = new HomeViewModel();
@@ -34,7 +40,7 @@ namespace app.ViewModels
 
         public void TicketView()
         {
-            //do something
+            Content = new TicketViewModel();
         }
 
         public void ReportView()
@@ -50,6 +56,11 @@ namespace app.ViewModels
         public void SignupView()
         {
             Content = new SignupViewModel();
+        }
+
+        public void OnClickDDMenu()
+        {
+            Content = new TopMenubarViewModel();
         }
     }
 }

@@ -50,8 +50,19 @@
           </Setter>
       </Style>
       </WrapPanel.Styles>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding OnClickCommand}" />
-    <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding OnClickCommand}"/>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+    <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}" />
+    <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}"/>
+    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" >
+      <ComboBox x:Name="ProfileDDMenu"  SelectedIndex="0" IsVisible="True" Opacity="0">
+            <!-- <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding DDItem}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate> -->
+            <ComboBoxItem>Inbox</ComboBoxItem>
+            <ComboBoxItem>Account Profile</ComboBoxItem>
+            <ComboBoxItem>Sign Out</ComboBoxItem>
+       </ComboBox>
+    </Button>
   </WrapPanel>
 </UserControl>

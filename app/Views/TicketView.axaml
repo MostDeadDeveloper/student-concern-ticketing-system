@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
-             x:Class="app.Views.HomeView">
-             
+             x:Class="app.Views.TicketView">
   <DockPanel>
     <!-- Panel for Menubar  -->
       <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
@@ -20,10 +19,11 @@
 
     <!-- Panel for Content  -->
       <Panel DockPanel.Dock="Right">
-        <TextBlock Text="{Binding Home}" Margin="5">
-          This is Home View
+      <Rectangle Fill="White"/>
+        <TextBlock Text="{Binding Ticket}" Margin="5">
+          This is Ticket View
         </TextBlock>
       </Panel>
   </DockPanel> 
-  
+
 </UserControl>

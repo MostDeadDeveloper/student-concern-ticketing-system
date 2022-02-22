@@ -11,5 +11,6 @@ namespace app.Services
             new Ticket { TicketName = "Second Ticket" },
             new Ticket { TicketName = "Third Ticket", IsFinished = true },
         };
+        
     }
 }

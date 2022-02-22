@@ -2,7 +2,10 @@ namespace app.ViewModels
 {
     class ReportViewModel : ViewModelBase
     {
-        public string? Reports { get; }
+        private string? Text; 
+        public string? Reports {
+            set {Text="This is Reports View";}
+        }
     }
 }
 

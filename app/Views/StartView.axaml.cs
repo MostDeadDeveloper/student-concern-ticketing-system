@@ -1,14 +1,13 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Avalonia.Media;
 using Avalonia.Media.Imaging;
 
 namespace app.Views
 {
-    public partial class TopMenubar : UserControl
+    public partial class StartView : UserControl
     {
-        public TopMenubar()
+        public StartView()
         {
             InitializeComponent();
         }

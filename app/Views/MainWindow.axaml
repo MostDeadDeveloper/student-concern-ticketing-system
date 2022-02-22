@@ -15,22 +15,10 @@
        <vm:MainWindowViewModel />
    </Design.DataContext>
 
-   <!-- Main Panel -->
    <DockPanel>
-        <!-- Panel for Menubar  -->
-       <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
-           <views:TopMenubar/>
-
-       </StackPanel>
-
-       <!-- Panel for Sidebar  -->
-       <StackPanel Spacing="10" Width="80" Background="LightBlue" DockPanel.Dock="Left">
-           <views:NavigationSidebar/>
-
-       </StackPanel>
 
        <!-- Panel for Content  -->
-       <Panel DockPanel.Dock="Left">
+       <Panel DockPanel.Dock="Top">
         <Rectangle Fill="White"/>
         <ContentControl Content="{Binding Content}" />
        </Panel>

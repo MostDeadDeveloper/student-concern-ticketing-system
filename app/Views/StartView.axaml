@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             x:Class="app.Views.StartView">
+
+  <StackPanel HorizontalAlignment="Center">
+    <StackPanel.Styles>
+      <!-- Style settings of profile button -->
+      <Style Selector="Button.StartBtn">
+          <Setter Property="Width" Value="100" />
+          <Setter Property="Height" Value="50" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src  -->
+              <ImageBrush Source="/Assets/start.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+    </StackPanel.Styles>
+  <TextBlock DockPanel.Dock="Top" Text="{Binding Start}" Margin="5">
+      This is Start View
+    </TextBlock>
+  <Button DockPanel.Dock="Bottom" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+  </StackPanel>
+</UserControl>
