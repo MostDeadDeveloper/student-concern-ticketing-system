@@ -11,9 +11,9 @@
                 Height="130"
                 Stroke="Gray"
                 StrokeThickness="2"> 
-                    <Ellipse.Fill> 
-                            <ImageBrush Source="/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
-                    </Ellipse.Fill>
+                <Ellipse.Fill> 
+                        <ImageBrush Source="/Assets/user.png" Stretch="Fill"></ImageBrush>
+                </Ellipse.Fill>
         </Ellipse>
 
         <TextBox Width="120"

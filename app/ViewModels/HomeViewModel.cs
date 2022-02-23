@@ -6,12 +6,7 @@ namespace app.ViewModels
 {
     class HomeViewModel : ViewModelBase
     {
-        // public string? RedRect { get; set; }
-        // public string? BlueRect { get; set; }
-        private string? Text; 
-        public string Home {
-            set {Text="This is Home View";} 
-        } 
+        
     }
 }
 

@@ -9,8 +9,8 @@
     <StackPanel.Styles>
       <!-- Style settings of home button -->
       <Style Selector="Button.HomeBtn">
-          <Setter Property="Width" Value="80" />
-          <Setter Property="Height" Value="80" />
+          <Setter Property="Width" Value="70" />
+          <Setter Property="Height" Value="70" />
           <Setter Property="BorderThickness" Value="0" />
 
           <!-- Set a background -->
@@ -23,8 +23,8 @@
       </Style>
       <!-- Style settings of ticket button -->
       <Style Selector="Button.TicketBtn">
-          <Setter Property="Width" Value="80" />
-          <Setter Property="Height" Value="80" />
+          <Setter Property="Width" Value="70" />
+          <Setter Property="Height" Value="70" />
           <Setter Property="BorderThickness" Value="0" />
 
           <!-- Set a background -->
@@ -37,8 +37,8 @@
       </Style>
       <!-- Style settings of reports button -->
       <Style Selector="Button.ReportBtn">
-          <Setter Property="Width" Value="80" />
-          <Setter Property="Height" Value="80" />
+          <Setter Property="Width" Value="70" />
+          <Setter Property="Height" Value="70" />
           <Setter Property="BorderThickness" Value="0" />
 
           <!-- Set a background -->
@@ -50,8 +50,8 @@
           </Setter>
       </Style>
     </StackPanel.Styles>
-    <Button DockPanel.Dock="Left" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
-    <Button DockPanel.Dock="Left" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.TicketView}"/>
-    <Button DockPanel.Dock="Left" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
+    <Button DockPanel.Dock="Left" Margin="5" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
+    <Button DockPanel.Dock="Left" Margin="5" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.TicketView}"/>
+    <Button DockPanel.Dock="Left" Margin="5" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
   </StackPanel>
 </UserControl>

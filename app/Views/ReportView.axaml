@@ -8,18 +8,19 @@
              x:Class="app.Views.ReportView">
  <DockPanel>
     <!-- Panel for Menubar  -->
-      <StackPanel Spacing="5" Height="80" Background="Blue" DockPanel.Dock="Top">
+      <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
           <views:TopMenubar/>
       </StackPanel>
 
       <!-- Panel for Sidebar  -->
-      <StackPanel Spacing="10" Width="80" Background="LightBlue" DockPanel.Dock="Left">
+    <Border Background="White" Padding="16">
+      <StackPanel Spacing="5" Width="80" Background="White" DockPanel.Dock="Left">
           <views:NavigationSidebar/>
       </StackPanel>
+    </Border>
 
     <!-- Panel for Content  -->
-      <Panel DockPanel.Dock="Right">
-      <Rectangle Fill="White"/>
+      <Panel DockPanel.Dock="Top" Background="LightBlue">
         <TextBlock Text="{Binding Reports}" Margin="5">
           This is Reports View
         </TextBlock>

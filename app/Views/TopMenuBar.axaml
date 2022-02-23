@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="app.Views.TopMenubar">
-
+    
   <WrapPanel HorizontalAlignment="Right">
     <WrapPanel.Styles>
       <!-- Style settings of search button -->
@@ -35,7 +35,7 @@
             </Setter.Value>
           </Setter>
       </Style>
-       <!-- Style settings of profile button -->
+      <!-- Style settings of profile button -->
       <Style Selector="Button.ProfileBtn">
           <Setter Property="Width" Value="50" />
           <Setter Property="Height" Value="50" />
@@ -45,7 +45,7 @@
           <Setter Property="Background">
             <Setter.Value>
                           <!-- img src  -->
-              <ImageBrush Source="/Assets/profile.png" />
+              <ImageBrush Source="/Assets/user.png" />
             </Setter.Value>
           </Setter>
       </Style>
@@ -62,7 +62,8 @@
             <ComboBoxItem>Inbox</ComboBoxItem>
             <ComboBoxItem>Account Profile</ComboBoxItem>
             <ComboBoxItem>Sign Out</ComboBoxItem>
-       </ComboBox>
+      </ComboBox>
     </Button>
   </WrapPanel>
+
 </UserControl>
