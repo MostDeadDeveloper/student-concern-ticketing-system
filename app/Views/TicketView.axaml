@@ -20,11 +20,58 @@
     </Border>
 
     <!-- Panel for Content  -->
-      <Panel DockPanel.Dock="Top" Background="LightBlue">
+      <!-- <Panel DockPanel.Dock="Top" Background="LightBlue">
         <TextBlock Text="{Binding Ticket}" Margin="5">
           This is Ticket View
         </TextBlock>
-      </Panel>
+      </Panel> -->
+      <Grid DockPanel.Dock="Left" Background="LightBlue" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="25"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="120"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Padding="20" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Sansation_Regular.ttf#Sansation">
+          Tickets
+        </Label>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+          Ticket Filter
+        </Label>
+        <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Background="LightGray" Width="180" Height="16" Watermark="Search"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Assigned to me
+        </TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Ongoing
+        </TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Unanswered
+        </TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Overdue
+        </TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Resolved
+        </TextBlock>
+        <Button Grid.Row="10" Grid.Column="0" Margin="56, 10, 0, 0" Content="Create Ticket" />
+        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Padding="20" FontSize="24" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Assigned To Me
+        </Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Background="White" Text="Cell[1,1]"/>
+      </Grid>
   </DockPanel> 
 
 </UserControl>
