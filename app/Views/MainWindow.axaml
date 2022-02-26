@@ -19,7 +19,6 @@
 
        <!-- Panel for Content  -->
        <Panel DockPanel.Dock="Top">
-        <Rectangle Fill="White"/>
         <ContentControl Content="{Binding Content}" />
        </Panel>
 

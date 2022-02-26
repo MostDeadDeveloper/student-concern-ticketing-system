@@ -4,15 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="app.Views.StartView">
-    <!-- <Image Source="/Assets/welcome-page.png" Stretch="Fill" StretchDirection="Both"/> -->
 
-  <StackPanel HorizontalAlignment="Center">
-    <Rectangle x:Name="Welcome">
-      <Rectangle.Fill> 
-        <ImageBrush Source="/Assets/welcome-page.png" Stretch="Fill"></ImageBrush>
-      </Rectangle.Fill>
-    </Rectangle>
-    <StackPanel.Styles>
+  <UserControl.Background>
+      <ImageBrush Source="/Assets/welcome-page.png"/>
+  </UserControl.Background>
+
+  <DockPanel HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+    <DockPanel.Styles>
       <!-- Style settings of profile button -->
       <Style Selector="Button.StartBtn">
           <Setter Property="Width" Value="100" />
@@ -27,10 +25,10 @@
             </Setter.Value>
           </Setter>
       </Style>
-    </StackPanel.Styles>
+    </DockPanel.Styles>
     <!-- <TextBlock DockPanel.Dock="Top" Text="{Binding Start}" Margin="5">
       This is Start View
     </TextBlock> -->
-  <Button DockPanel.Dock="Bottom" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
-  </StackPanel>
+  <Button VerticalAlignment="Bottom" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+  </DockPanel>
 </UserControl>

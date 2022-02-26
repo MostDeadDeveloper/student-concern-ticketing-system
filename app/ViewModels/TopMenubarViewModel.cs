@@ -7,6 +7,6 @@ namespace app.ViewModels
 {
     class TopMenubarViewModel : ViewModelBase
     {
-        
+        public string? DDMenu {get; set;}
     }
 }

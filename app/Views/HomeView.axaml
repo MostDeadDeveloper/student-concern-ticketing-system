@@ -49,7 +49,7 @@
         <Label RelativePanel.Below="RecHeader" x:Name="LblCurTicket" Margin="10" Padding="20" FontSize="20" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto">
           Current Tickets
         </Label>
-        <Button RelativePanel.Below="RecHeader" RelativePanel.AlignRightWith="RecHeader" Name="CreateTicket" Classes="CreateTicketBtn" Margin="30" />
+        <Button RelativePanel.Below="RecHeader" RelativePanel.AlignRightWith="RecHeader" Name="CreateTicket" Classes="CreateTicketBtn" Margin="30" Click="CreateTicket_Click"/>
         
         <Grid RelativePanel.Below="LblCurTicket" x:Name="grdMiddle" ColumnDefinitions="Auto,*,Auto" MaxWidth="660" HorizontalAlignment="Stretch" Margin="0 16 0 0">
           <Grid.Styles>
@@ -111,7 +111,11 @@
             </ListBox.ItemTemplate>
           </ListBox>
         </Grid>
-
+        
+      <!-- <Popup RelativePanel.Below="grdBottom" Margin="10,10,0,13" Name="Popup1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200" 
+      IsOpen="{Binding ElementName=CreateTicket,Path=IsPressed}" PlacementTarget="{Binding ElementName=CreateTicket}">  
+          <TextBlock Name="McTextBlock" Background="White"> This is popup text </TextBlock>  
+      </Popup>  -->
       </RelativePanel>
   </DockPanel> 
   

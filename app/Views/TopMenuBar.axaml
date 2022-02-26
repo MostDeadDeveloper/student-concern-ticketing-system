@@ -51,13 +51,14 @@
           </Setter>
       </Style>
       </WrapPanel.Styles>
+    <Label DockPanel.Dock="Right" x:Name="lbltracker" Content="NoEvent"/>
     <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}" />
     <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}"/>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" >
+    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn">
       <ComboBox x:Name="ProfileDDMenu"  SelectedIndex="0" IsVisible="True" Opacity="0">
             <ComboBoxItem>Inbox</ComboBoxItem>
             <ComboBoxItem>Account Profile</ComboBoxItem>
-            <ComboBoxItem>Sign Out</ComboBoxItem>
+            <ComboBoxItem>Sign out</ComboBoxItem>
       </ComboBox>
     </Button>
   </WrapPanel>
