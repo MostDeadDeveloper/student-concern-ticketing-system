@@ -29,6 +29,7 @@
     <!-- <TextBlock DockPanel.Dock="Top" Text="{Binding Start}" Margin="5">
       This is Start View
     </TextBlock> -->
-  <Button VerticalAlignment="Bottom" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+  <Label Content="Iskolar Help" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="100" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+  <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
   </DockPanel>
 </UserControl>

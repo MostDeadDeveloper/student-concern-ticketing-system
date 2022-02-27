@@ -49,9 +49,24 @@
             </Setter.Value>
           </Setter>
       </Style>
+      <!-- Style settings of settings button -->
+      <Style Selector="Button.SettingBtn">
+          <Setter Property="Width" Value="70" />
+          <Setter Property="Height" Value="70" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src -->
+              <ImageBrush Source="/Assets/settings.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
     </StackPanel.Styles>
     <Button DockPanel.Dock="Left" Margin="5" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
     <Button DockPanel.Dock="Left" Margin="5" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.TicketView}"/>
     <Button DockPanel.Dock="Left" Margin="5" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
+    <Button DockPanel.Dock="Left" Margin="5" Classes="SettingBtn" />
   </StackPanel>
 </UserControl>

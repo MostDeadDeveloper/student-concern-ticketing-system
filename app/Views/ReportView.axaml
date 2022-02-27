@@ -20,11 +20,31 @@
     </Border>
 
     <!-- Panel for Content  -->
-      <Panel DockPanel.Dock="Top" Background="LightBlue">
-        <TextBlock Text="{Binding Reports}" Margin="5">
-          This is Reports View
+      <StackPanel DockPanel.Dock="Top" Background="LightBlue">
+        <TextBlock Text="{Binding Reports}" Margin="10" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+          Reports
         </TextBlock>
-      </Panel>
+        <Border Background="White" Margin="10" Padding="20" >
+          <StackPanel>
+            <Label Content="General Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Label Content="Select Time Period" Margin="5, 5, 0, 0" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+          </StackPanel>
+        </Border>
+        <Border Background="White" Margin="10" Padding="20">
+          <StackPanel>
+            <Label Content="Recent Ticket Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Label Content="Select Time Period" Margin="5, 5, 0, 0" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+          </StackPanel>
+        </Border>
+        <Border Background="White" Margin="10" Padding="20">
+          <StackPanel>
+            <Label Content="Ticket Status Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+          </StackPanel>
+        </Border>
+      </StackPanel>
   </DockPanel> 
 
 </UserControl>

@@ -91,7 +91,7 @@
           </Button>
           <Carousel  Grid.Column="1" x:Name="carousel" Width="500">
             <Carousel.PageTransition>
-              <PageSlide Duration="0.25" Orientation="Horizontal"/>
+              <PageSlide Duration="0.25" Orientation="Horizontal" />
             </Carousel.PageTransition>
             <Rectangle Width="100" Height="100" Fill="White" />
             <Rectangle Width="100" Height="100" Fill="Red" />
