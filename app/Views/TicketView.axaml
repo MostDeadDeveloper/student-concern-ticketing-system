@@ -4,7 +4,7 @@
              xmlns:views="using:app.Views"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
              x:Class="app.Views.TicketView">
   <DockPanel>
     <!-- Panel for Menubar  -->
@@ -20,11 +20,6 @@
     </Border>
 
     <!-- Panel for Content  -->
-      <!-- <Panel DockPanel.Dock="Top" Background="LightBlue">
-        <TextBlock Text="{Binding Ticket}" Margin="5">
-          This is Ticket View
-        </TextBlock>
-      </Panel> -->
       <Grid DockPanel.Dock="Left" Background="LightBlue" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"></ColumnDefinition>
@@ -40,7 +35,7 @@
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
-          <RowDefinition Height="120"/>
+          <RowDefinition Height="100"/>
           <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -67,10 +62,35 @@
           Resolved
         </TextBlock>
         <Button Grid.Row="10" Grid.Column="0" Margin="56, 10, 0, 0" Content="Create Ticket" Click="CreateTicket_Click"/>
+        
         <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Padding="20" FontSize="24" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
           Assigned To Me
         </Label>
-        <TextBox Grid.Row="1" Grid.Column="1" Background="White" Text="Cell[1,1]"/>
+        <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
+          <WrapPanel Background="White" HorizontalAlignment="Stretch">
+            <Label Margin="60, 20, 20, 20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Ticket #
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Last Update Date
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Subject
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              User
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Priority
+            </Label>
+          </WrapPanel>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
+          <WrapPanel Background="White" HorizontalAlignment="Stretch">
+         
+          </WrapPanel>
+        </Border>
+
       </Grid>
   </DockPanel> 
 

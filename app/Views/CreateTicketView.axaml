@@ -2,27 +2,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
         x:Class="app.Views.CreateTicketView"
         TransparencyLevelHint="AcrylicBlur"
         Background="White"
+        CornerRadius="5"
         Title="New Ticket"
         ExtendClientAreaToDecorationsHint="True">
 
-    <Panel>
+    <Panel Margin="50">
         <ExperimentalAcrylicBorder IsHitTestVisible="False">
             <ExperimentalAcrylicBorder.Material>
                 <ExperimentalAcrylicMaterial
                     BackgroundSource="Digger"
                     TintColor="White"
                     TintOpacity="1"
-                    MaterialOpacity="0.65" />
+                    MaterialOpacity="0.80" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
 
-        <Panel Margin="40">
-        <TextBlock Text="New Ticket" />
+        <Grid Background="White" ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        </Panel>
+            <Label Grid.Row="0" Grid.Column="0" Content="New Ticket" Padding="20" FontSize="28" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Name
+            </Label>
+            <Label Grid.Row="1" Grid.Column="1" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Section
+            </Label>
+            <Label Grid.Row="1" Grid.Column="2" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Ticket Category
+            </Label>
+            <TextBox Grid.Row="2" Grid.Column="0" x:Name="txtName" Margin="0, 0, 20, 0" Background="LightGray"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtSection" Margin="0, 0, 20, 0" Background="LightGray"/>
+            <TextBox Grid.Row="2" Grid.Column="2" x:Name="txtTicCategory" Margin="0, 0, 20, 0" Background="LightGray"/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Email
+            </Label>
+            <TextBox Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="3" x:Name="txtEmail" Margin="0, 0, 20, 0" Background="LightGray"/>
+            <Label Grid.Row="6" Grid.Column="0" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Ticket Subject
+            </Label>
+            <TextBox Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="3" x:Name="txtTicSubject" Margin="0, 0, 20, 0" Background="LightGray"/>
+             <Label Grid.Row="8" Grid.Column="0" Margin="0, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+                Description
+            </Label>
+            <TextBox Grid.Row="9" Grid.Column="0"  Grid.ColumnSpan="3" x:Name="txtDescription" TextWrapping="Wrap" Margin="0, 0, 20, 0" Background="LightGray"/>
+            <Button Grid.Row="10" Grid.Column="2" Content="SUBMIT" Margin="10" Background="DarkRed" Foreground="White" FontSize="22" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto" />
+        </Grid>
+
     </Panel>
+
 </Window>

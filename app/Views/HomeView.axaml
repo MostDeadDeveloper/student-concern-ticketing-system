@@ -4,7 +4,7 @@
              xmlns:views="using:app.Views"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
              x:Class="app.Views.HomeView">
              
   <DockPanel Background="LightBlue">
@@ -51,7 +51,12 @@
         </Label>
         <Button RelativePanel.Below="RecHeader" RelativePanel.AlignRightWith="RecHeader" Name="CreateTicket" Classes="CreateTicketBtn" Margin="30" Click="CreateTicket_Click"/>
         
-        <Grid RelativePanel.Below="LblCurTicket" x:Name="grdMiddle" ColumnDefinitions="Auto,*,Auto" MaxWidth="660" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+        <Grid RelativePanel.Below="LblCurTicket" x:Name="grdMiddle" MaxWidth="600" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
           <Grid.Styles>
             <!-- Style settings of left button -->
             <Style Selector="Button.LeftBtn">
@@ -84,15 +89,16 @@
           </Grid.Styles>
           <Button Name="left" Classes="LeftBtn" Grid.Column="0" VerticalAlignment="Center" Padding="10,20" Margin="4">
           </Button>
-          <Carousel x:Name="carousel" Grid.Column="1" Width="500">
+          <Carousel  Grid.Column="1" x:Name="carousel" Width="500">
             <Carousel.PageTransition>
               <PageSlide Duration="0.25" Orientation="Horizontal"/>
             </Carousel.PageTransition>
             <Rectangle Width="100" Height="100" Fill="White" />
             <Rectangle Width="100" Height="100" Fill="Red" />
             <Rectangle Width="100" Height="100" Fill="Blue" />
+            <Rectangle Width="100" Height="100" Fill="Gray" />
           </Carousel>
-          <Button Name="right" Classes="RightBtn" Grid.Column="2" VerticalAlignment="Center" Padding="10,20" Margin="4">
+          <Button Name="right" Classes="RightBtn" Grid.Column="6" VerticalAlignment="Center" Padding="10,20" Margin="4">
           </Button>
         </Grid>
 
@@ -100,22 +106,20 @@
           Recent Alerts
         </Label>
 
-        <Grid RelativePanel.Below="LblAlerts" x:Name="grdBottom" ColumnDefinitions="Auto,*,Auto" MaxWidth="660" HorizontalAlignment="Stretch" Margin="0 16 0 0">
-          <ListBox Items="{Binding MyItems}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border Background="Red" CornerRadius="4" Padding="4">
-                        <TextBlock Text="{Binding}"/>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-          </ListBox>
+        <Grid RelativePanel.Below="LblAlerts" x:Name="grdBottom" RowDefinitions="Auto,*,Auto" MaxWidth="600" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+          <Border BorderBrush="Black" BorderThickness="1">
+            <ListBox Items="{Binding MyItems}">
+              <ListBox.ItemTemplate>
+                  <DataTemplate>
+                      <Border Background="Red" CornerRadius="4" Padding="4">
+                          <TextBlock Text="{Binding}"/>
+                      </Border>
+                  </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+          </Border>
         </Grid>
-        
-      <!-- <Popup RelativePanel.Below="grdBottom" Margin="10,10,0,13" Name="Popup1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200" 
-      IsOpen="{Binding ElementName=CreateTicket,Path=IsPressed}" PlacementTarget="{Binding ElementName=CreateTicket}">  
-          <TextBlock Name="McTextBlock" Background="White"> This is popup text </TextBlock>  
-      </Popup>  -->
+
       </RelativePanel>
   </DockPanel> 
   
