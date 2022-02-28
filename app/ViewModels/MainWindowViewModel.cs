@@ -58,6 +58,11 @@ namespace app.ViewModels
             Content = new SignupViewModel();
         }
 
+        public void AdminSettingView()
+        {
+            Content = new AdminSettingViewModel();
+        }
+
         public void OnClickDDMenu()
         {
             Content = new TopMenubarViewModel();

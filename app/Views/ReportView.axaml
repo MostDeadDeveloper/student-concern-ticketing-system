@@ -20,6 +20,7 @@
     </Border>
 
     <!-- Panel for Content  -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True">
       <StackPanel DockPanel.Dock="Top" Background="LightBlue">
         <TextBlock Text="{Binding Reports}" Margin="10" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
           Reports
@@ -28,6 +29,7 @@
           <StackPanel>
             <Label Content="General Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
             <Label Content="Select Time Period" Margin="5, 5, 0, 0" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <DatePicker/>
             <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
           </StackPanel>
         </Border>
@@ -35,16 +37,30 @@
           <StackPanel>
             <Label Content="Recent Ticket Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
             <Label Content="Select Time Period" Margin="5, 5, 0, 0" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <ComboBox x:Name="TimePeriodMenu"  SelectedIndex="0" IsVisible="True" Opacity="1">
+              <ComboBoxItem>Yesterday</ComboBoxItem>
+              <ComboBoxItem>Last Week</ComboBoxItem>
+              <ComboBoxItem>Last Month</ComboBoxItem>
+            </ComboBox>
             <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
           </StackPanel>
         </Border>
         <Border Background="White" Margin="10" Padding="20">
           <StackPanel>
             <Label Content="Ticket Status Report" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <Label Content="Select Ticket Status" Margin="5, 5, 0, 0" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+            <ComboBox x:Name="TimeStatusMenu"  SelectedIndex="0" IsVisible="True" Opacity="1">
+              <ComboBoxItem>Ongoing</ComboBoxItem>
+              <ComboBoxItem>Open</ComboBoxItem>
+              <ComboBoxItem>Unassigned</ComboBoxItem>
+              <ComboBoxItem>Overdue</ComboBoxItem>
+              <ComboBoxItem>Resolved</ComboBoxItem>
+            </ComboBox>
             <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
           </StackPanel>
         </Border>
       </StackPanel>
+    </ScrollViewer>
+    
   </DockPanel> 
-
 </UserControl>
