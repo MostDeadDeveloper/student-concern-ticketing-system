@@ -65,7 +65,7 @@
       </Style>
     </StackPanel.Styles>
     <Button DockPanel.Dock="Left" Margin="5" Classes="HomeBtn" Command="{Binding $parent[Window].DataContext.HomeView}" />
-    <Button DockPanel.Dock="Left" Margin="5" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.TicketView}"/>
+    <Button DockPanel.Dock="Left" Margin="5" Classes="TicketBtn" Command="{Binding $parent[Window].DataContext.StaffTicketView}"/>
     <Button DockPanel.Dock="Left" Margin="5" Classes="ReportBtn" Command="{Binding $parent[Window].DataContext.ReportView}"/>
     <Button DockPanel.Dock="Left" Margin="5" Classes="SettingBtn" Command="{Binding $parent[Window].DataContext.AdminSettingView}"/>
   </StackPanel>

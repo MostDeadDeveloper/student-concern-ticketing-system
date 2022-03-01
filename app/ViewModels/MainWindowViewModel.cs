@@ -38,9 +38,9 @@ namespace app.ViewModels
             Content = new HomeViewModel();
         }
 
-        public void TicketView()
+        public void StaffTicketView()
         {
-            Content = new TicketViewModel();
+            Content = new StaffTicketViewModel();
         }
 
         public void ReportView()
@@ -67,7 +67,17 @@ namespace app.ViewModels
         {
             Content = new ProfileViewModel();
         }
-        
+
+        public void AdminSLAManageView()
+        {
+            Content = new AdminSLAManageViewModel();
+        }
+
+        public void AdminUserManageView()
+        {
+            Content = new AdminUserManageViewModel();
+        }
+
         public void OnClickDDMenu()
         {
             Content = new TopMenubarViewModel();

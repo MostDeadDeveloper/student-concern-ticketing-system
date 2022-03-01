@@ -1,6 +1,6 @@
 namespace app.ViewModels
 {
-    class TicketViewModel : ViewModelBase
+    class StaffTicketViewModel : ViewModelBase
     {
         private string? Text;
         public string? Ticket {

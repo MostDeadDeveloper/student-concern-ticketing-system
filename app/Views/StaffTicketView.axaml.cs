@@ -5,9 +5,9 @@ using Avalonia.Interactivity;
 
 namespace app.Views
 {
-    public partial class TicketView : UserControl
+    public partial class StaffTicketView : UserControl
     {
-        public TicketView()
+        public StaffTicketView()
         {
             InitializeComponent();
         }
