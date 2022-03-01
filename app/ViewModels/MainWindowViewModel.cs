@@ -63,6 +63,11 @@ namespace app.ViewModels
             Content = new AdminSettingViewModel();
         }
 
+        public void ProfileView()
+        {
+            Content = new ProfileViewModel();
+        }
+        
         public void OnClickDDMenu()
         {
             Content = new TopMenubarViewModel();

@@ -20,6 +20,7 @@
     </Border>
 
     <!-- Panel for Content  -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True">
       <Grid DockPanel.Dock="Left" Background="LightBlue" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"></ColumnDefinition>
@@ -92,6 +93,7 @@
         </Border>
 
       </Grid>
+    </ScrollViewer>
+    
   </DockPanel> 
-
 </UserControl>

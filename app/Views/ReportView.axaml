@@ -40,7 +40,7 @@
             <ComboBox x:Name="TimePeriodMenu"  SelectedIndex="0" IsVisible="True" Opacity="1">
               <ComboBoxItem>Yesterday</ComboBoxItem>
               <ComboBoxItem>Last Week</ComboBoxItem>
-              <ComboBoxItem>Last Month</ComboBoxItem>
+              <ComboBoxItem>3 Days Before</ComboBoxItem>
             </ComboBox>
             <Button Content="Generate" Margin="5, 5, 0, 0" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
           </StackPanel>
@@ -61,6 +61,6 @@
         </Border>
       </StackPanel>
     </ScrollViewer>
-    
+
   </DockPanel> 
 </UserControl>

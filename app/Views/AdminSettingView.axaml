@@ -81,7 +81,7 @@
                 </Setter>
             </Style>
           </WrapPanel.Styles>
-          <Button Margin="5" Classes="ProfileBtn" />
+          <Button Margin="5" Classes="ProfileBtn" Command="{Binding $parent[Window].DataContext.ProfileView}"/>
           <Button Margin="5" Classes="UserManageBtn" />
           <Button Margin="5" Classes="SLAManageBtn" />
           <Button Margin="5" Classes="LogoutBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
