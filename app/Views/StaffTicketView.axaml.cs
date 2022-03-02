@@ -23,7 +23,7 @@ namespace app.Views
         }
 
         private void TicketInfo_Click(object sender, RoutedEventArgs e){
-                Window TicketInfo = new AdminTicketInfoView();
+                Window TicketInfo = new StaffTicketInfoView();
                 TicketInfo.Show();
         }
     }

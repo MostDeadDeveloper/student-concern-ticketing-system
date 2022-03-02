@@ -43,6 +43,11 @@ namespace app.ViewModels
             Content = new StaffTicketViewModel();
         }
 
+        public void AdminTicketView()
+        {
+            Content = new AdminTicketViewModel();
+        }
+
         public void ReportView()
         {
             Content = new ReportViewModel();
@@ -61,6 +66,11 @@ namespace app.ViewModels
         public void AdminSettingView()
         {
             Content = new AdminSettingViewModel();
+        }
+
+        public void StaffSettingView()
+        {
+            Content = new StaffSettingViewModel();
         }
 
         public void ProfileView()

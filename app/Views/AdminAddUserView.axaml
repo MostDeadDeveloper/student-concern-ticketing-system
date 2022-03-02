@@ -34,10 +34,23 @@
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
-          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="100"/>
           <RowDefinition Height="Auto"/>
       </Grid.RowDefinitions>
       <Label Content="Add User" Grid.Row="0" Grid.Column="0"/>
+      <Label Content="Username:" Grid.Row="1" Grid.Column="0"/>
+      <TextBox Grid.Row="1" Grid.Column="1" Width="200"/>
+      <Label Content="Password:" Grid.Row="2" Grid.Column="0"/>
+      <TextBox Grid.Row="2" Grid.Column="1" Width="200"/>
+      <Label Content="Role:" Grid.Row="3" Grid.Column="0"/>
+      <TextBox Grid.Row="3" Grid.Column="1" Width="200"/>
+      <Label Content="Name:" Grid.Row="4" Grid.Column="0"/>
+      <TextBox Grid.Row="4" Grid.Column="1" Width="200"/>
+      <Label Content="Email:" Grid.Row="5" Grid.Column="0"/>
+      <TextBox Grid.Row="5" Grid.Column="1" Width="200"/>
+      <Label Content="Contact Number:" Grid.Row="6" Grid.Column="0"/>
+      <TextBox Grid.Row="6" Grid.Column="1" Width="200"/>
+      <Button Content="Create" Grid.Row="8" Grid.Column="2"/>
     </Grid>
 
  </DockPanel> 
