@@ -78,6 +78,26 @@ namespace app.ViewModels
             Content = new AdminUserManageViewModel();
         }
 
+        public void AdminAddUserView()
+        {
+            Content = new AdminAddUserViewModel();
+        }
+
+        public void AdminEditUserView()
+        {
+            Content = new AdminEditUserViewModel();
+        }
+
+        public void AdminAddSLAView()
+        {
+            Content = new AdminAddSLAViewModel();
+        }
+
+        public void AdminEditSLAView()
+        {
+            Content = new AdminEditSLAViewModel();
+        }
+
         public void OnClickDDMenu()
         {
             Content = new TopMenubarViewModel();

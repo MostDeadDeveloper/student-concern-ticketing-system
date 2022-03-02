@@ -21,5 +21,10 @@ namespace app.Views
                 Window CreateTicket = new CreateTicketView();
                 CreateTicket.Show();
         }
+
+        private void TicketInfo_Click(object sender, RoutedEventArgs e){
+                Window TicketInfo = new AdminTicketInfoView();
+                TicketInfo.Show();
+        }
     }
 }

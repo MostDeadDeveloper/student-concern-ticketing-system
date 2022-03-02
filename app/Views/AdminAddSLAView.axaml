@@ -21,7 +21,7 @@
 
     <!-- Panel for Content  -->
     <Panel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="This is Admin Add SLA Management" />
+        <Label Content="This is Admin Add SLA" />
     </Panel>
 
  </DockPanel> 
