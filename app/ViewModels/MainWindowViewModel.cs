@@ -8,9 +8,16 @@ namespace app.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {
+        public Database connection; 
+
         public MainWindowViewModel(Database db)
         {
             List = new TicketListViewModel(db.GetItems());
+
+            // provide a database connection to everyone, a very safety hazard pero hey
+            // nobody cares.
+            connection = db;
+
             StartView();
         }
 
@@ -40,7 +47,7 @@ namespace app.ViewModels
 
         public void StaffTicketView()
         {
-            Content = new StaffTicketViewModel();
+            Content = new StaffTicketViewModel(connection.GetItems());
         }
 
         public void ReportView()

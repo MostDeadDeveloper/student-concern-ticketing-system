@@ -1,10 +1,17 @@
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using app.Models;
+
 namespace app.ViewModels
 {
     class StaffTicketViewModel : ViewModelBase
     {
-        private string? Text;
-        public string? Ticket {
-            set {Text="This is Ticket View";}
+
+        public StaffTicketViewModel(IEnumerable<Ticket> items)
+        {
+            Tickets = new ObservableCollection<Ticket>(items);
         }
+
+        public ObservableCollection<Ticket> Tickets { get; }
     }
 }
