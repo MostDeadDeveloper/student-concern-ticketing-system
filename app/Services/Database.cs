@@ -8,13 +8,14 @@ namespace app.Services
 {
     public class Database : DbContext
     {
-        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Ticket> Ticket { get; set; }
+        public DbSet<User> User {get; set;}
 
         public string DbPath { get; }
 
         public Database()
         {
-            DbPath = "blogging.db";
+            DbPath = "database.db";
         }
 
         // The following configures EF to create a Sqlite database file in the
@@ -22,7 +23,7 @@ namespace app.Services
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite($"Data Source={DbPath}");
 
-        public IEnumerable<Ticket> GetItems() => this.Tickets;
+        public IEnumerable<Ticket> GetItems() => this.Ticket;
     }
 }
 
