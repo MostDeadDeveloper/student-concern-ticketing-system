@@ -88,7 +88,19 @@
         </Border>
         <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
           <WrapPanel Background="White" HorizontalAlignment="Stretch">
-         
+            <ItemsControl Items="{Binding Tickets}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+                            <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding TicketName}" Grid.Column="1" FontSize="16" FontStyle="Normal"/>
+                            <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding Status}" Grid.Column="2"  FontSize="16" FontStyle="Normal"/>
+                            <Button Margin="60, 20, 20, 20" Grid.Row="0" Grid.Column="3"> View Info </Button>
+                            <Button Margin="20" Grid.Row="0" Grid.Column="4"> Edit Data </Button>
+                            <Button Margin="20" Grid.Row="0" Grid.Column="5"> Delete Data </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
           </WrapPanel>
         </Border>
 
