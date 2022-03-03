@@ -86,6 +86,7 @@
             </Label>
           </WrapPanel>
         </Border>
+        <!-- <This is where ticket list displays> -->
         <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
           <WrapPanel Background="White" HorizontalAlignment="Stretch">
             <ItemsControl Items="{Binding Tickets}">
@@ -97,6 +98,7 @@
                             <Button Margin="60, 20, 20, 20" Grid.Row="0" Grid.Column="3"> View Info </Button>
                             <Button Margin="20" Grid.Row="0" Grid.Column="4"> Edit Data </Button>
                             <Button Margin="20" Grid.Row="0" Grid.Column="5"> Delete Data </Button>
+			    <Button Content="Click Ticket Info" Click="TicketInfo_Click"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

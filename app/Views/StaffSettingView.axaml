@@ -20,9 +20,43 @@
     </Border>
 
     <!-- Panel for Content  -->
-    <Panel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="This is Admin Add SLA Management" />
-    </Panel>
+    <StackPanel DockPanel.Dock="Top" Background="LightBlue">
+        <TextBlock Text="This is Staff Settings"/>
+        <WrapPanel>
+          <WrapPanel.Styles>
+            <!-- Style settings of profile button -->
+            <Style Selector="Button.ProfileBtn">
+                <Setter Property="Width" Value="70" />
+                <Setter Property="Height" Value="70" />
+                <Setter Property="BorderThickness" Value="0" />
+
+                <!-- Set a background -->
+                <Setter Property="Background">
+                  <Setter.Value>
+                                <!-- img src -->
+                    <ImageBrush Source="/Assets/user.png" />
+                  </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- Style settings of logout button -->
+            <Style Selector="Button.LogoutBtn">
+                <Setter Property="Width" Value="70" />
+                <Setter Property="Height" Value="70" />
+                <Setter Property="BorderThickness" Value="0" />
+
+                <!-- Set a background -->
+                <Setter Property="Background">
+                  <Setter.Value>
+                                <!-- img src -->
+                    <ImageBrush Source="/Assets/logout.png" />
+                  </Setter.Value>
+                </Setter>
+            </Style>
+          </WrapPanel.Styles>
+          <Button Margin="5" Classes="ProfileBtn" Command="{Binding $parent[Window].DataContext.ProfileView}"/>
+          <Button Margin="5" Classes="LogoutBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+        </WrapPanel>
+      </StackPanel>
 
  </DockPanel> 
 </UserControl>
