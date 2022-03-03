@@ -50,6 +50,11 @@ namespace app.ViewModels
             Content = new StaffTicketViewModel(connection.GetItems());
         }
 
+        public void AdminTicketView()
+        {
+            Content = new AdminTicketViewModel();
+        }
+
         public void ReportView()
         {
             Content = new ReportViewModel();
@@ -70,6 +75,11 @@ namespace app.ViewModels
             Content = new AdminSettingViewModel();
         }
 
+        public void StaffSettingView()
+        {
+            Content = new StaffSettingViewModel();
+        }
+
         public void ProfileView()
         {
             Content = new ProfileViewModel();
@@ -83,6 +93,26 @@ namespace app.ViewModels
         public void AdminUserManageView()
         {
             Content = new AdminUserManageViewModel();
+        }
+
+        public void AdminAddUserView()
+        {
+            Content = new AdminAddUserViewModel();
+        }
+
+        public void AdminEditUserView()
+        {
+            Content = new AdminEditUserViewModel();
+        }
+
+        public void AdminAddSLAView()
+        {
+            Content = new AdminAddSLAViewModel();
+        }
+
+        public void AdminEditSLAView()
+        {
+            Content = new AdminEditSLAViewModel();
         }
 
         public void OnClickDDMenu()

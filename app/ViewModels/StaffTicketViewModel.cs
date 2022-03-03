@@ -13,5 +13,6 @@ namespace app.ViewModels
         }
 
         public ObservableCollection<Ticket> Tickets { get; }
+
     }
 }

@@ -20,9 +20,43 @@
     </Border>
 
     <!-- Panel for Content  -->
-    <Panel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="This is Admin Add SLA Management" />
-    </Panel>
+    <StackPanel DockPanel.Dock="Left" Background="LightBlue">
+        <Label Content="Add New Service-Level Agreement (SLA)" />
+        <Label Content="SLA Name:" />
+        <TextBox />
+        <Label Content="Description:" />
+        <TextBox />
+        <Label Content="Ticket Priority" />
+        <Grid Background="LightGray">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Label Grid.Row="0" Grid.Column="1" Content="First Response (in hours):" />
+          <Label Grid.Row="0" Grid.Column="2" Content="Ticket Duration (in hours):" />
+          <Label Grid.Row="1" Grid.Column="0" Content="Urgent" />
+          <TextBox Grid.Row="1" Grid.Column="1"/>
+          <TextBox Grid.Row="1" Grid.Column="2"/>
+          <Label Grid.Row="2" Grid.Column="0" Content="Low Priority" />
+          <TextBox Grid.Row="2" Grid.Column="1"/>
+          <TextBox Grid.Row="2" Grid.Column="2"/>
+          <Label Grid.Row="3" Grid.Column="0" Content="Medium Priority" />
+          <TextBox Grid.Row="3" Grid.Column="1"/>
+          <TextBox Grid.Row="3" Grid.Column="2"/>
+          <Label Grid.Row="4" Grid.Column="0" Content="High Priority" />
+          <TextBox Grid.Row="4" Grid.Column="1"/>
+          <TextBox Grid.Row="4" Grid.Column="2"/>
+        </Grid>
+        <Button Content="Create"/>
+    </StackPanel>
 
  </DockPanel> 
 </UserControl>

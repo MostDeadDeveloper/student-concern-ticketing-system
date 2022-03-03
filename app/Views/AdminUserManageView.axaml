@@ -20,9 +20,54 @@
     </Border>
 
     <!-- Panel for Content  -->
-    <Panel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="This is Admin User Management" />
-    </Panel>
-
+    <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True">
+      <Grid DockPanel.Dock="Left" ShowGridLines="False" Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="User Management" Margin="20, 20, 50, 20" Grid.Row="0" Grid.Column="0" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Button Content="Add New User" Grid.Row="0" Grid.Column="1" Command="{Binding $parent[Window].DataContext.AdminAddUserView}"/>
+        <Label Content="Admin" Margin="30, 10, 0, 10" Grid.Row="1" Grid.Column="0" FontSize="24" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Border Background="White" Margin="10" Padding="10" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+          <StackPanel>
+            <WrapPanel>
+              <Label Content="#" />
+              <Label Content="Name" />
+              <Label Content="Action" />
+            </WrapPanel>
+            <WrapPanel>
+              <Label Content="01" />
+              <Label Content="Sample" />
+              <Button Content="Edit" Command="{Binding $parent[Window].DataContext.AdminEditUserView}"/>
+              <Button Content="Delete" />
+            </WrapPanel>
+          </StackPanel>
+        </Border>
+        <Label Content="Staff" Margin="30, 10, 0, 10" Grid.Row="3" Grid.Column="0" FontSize="24" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Border Background="White" Margin="10" Padding="20" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+          <StackPanel>
+            <WrapPanel>
+              <Label Content="#" />
+              <Label Content="Name" />
+              <Label Content="Action" />
+            </WrapPanel>
+            <WrapPanel>
+              <Label Content="01" />
+              <Label Content="Sample" />
+              <Button Content="Edit" Command="{Binding $parent[Window].DataContext.AdminEditUserView}"/>
+              <Button Content="Delete" />
+            </WrapPanel>
+          </StackPanel>
+        </Border>
+      </Grid>
+    </ScrollViewer>
  </DockPanel> 
 </UserControl>

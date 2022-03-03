@@ -42,7 +42,6 @@
               <ImageBrush Source="/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <!-- <Label x:Name="Profile" Content="This is Profile View" Grid.Row="0" Grid.Column="0" /> -->
         <Label Content="Name" Grid.Row="0" Grid.Column="1" Margin="20, 40, 0, 5" FontSize="22" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
         <Label Content="Role/Title" Grid.Row="1" Grid.Column="1" Margin="22, 5, 0, 5" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
         <Label Content="Username:" Grid.Row="3" Grid.Column="1" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />

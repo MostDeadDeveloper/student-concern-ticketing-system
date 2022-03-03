@@ -6,7 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
              x:Class="app.Views.AdminTicketView">
- <DockPanel>
+  <DockPanel>
     <!-- Panel for Menubar  -->
       <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
           <views:TopMenubar/>
@@ -20,9 +20,88 @@
     </Border>
 
     <!-- Panel for Content  -->
-    <Panel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="This is Admin Ticket View" />
-    </Panel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True">
+      <Grid DockPanel.Dock="Left" Background="LightBlue" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="25"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="100"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
- </DockPanel> 
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Padding="20" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Sansation_Regular.ttf#Sansation">
+          Tickets
+        </Label>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+          Ticket Filter
+        </Label>
+        <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Background="LightGray" Width="180" Height="16" Watermark="Search"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          All Tickets
+        </TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Unassigned
+        </TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Ongoing
+        </TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Overdue
+        </TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="0" Margin="56, 2, 0, 2" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Medium.ttf#Roboto">
+          Resolved
+        </TextBlock>
+        <Button Grid.Row="10" Grid.Column="0" Margin="56, 10, 0, 0" Content="Create Ticket" Click="CreateTicket_Click"/>
+        
+        <WrapPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="20">
+          <Button Content="Mark Overdue" />
+          <Button Content="Close" />
+          <Button Content="Delete" />
+          <Button Content="Export to CSV" />
+          <Button Content="Show # records" />
+        </WrapPanel>
+        <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
+          <WrapPanel Background="White" HorizontalAlignment="Stretch">
+            <Label Margin="60, 20, 20, 20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Ticket #
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Last Update Date
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Subject
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              User
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Priority
+            </Label>
+            <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
+              Asigned To
+            </Label>
+          </WrapPanel>
+        </Border>
+        <!-- <This is where ticket list displays> -->
+        <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
+          <WrapPanel Background="White" HorizontalAlignment="Stretch">
+            <Button Content="Click Ticket Info" Click="TicketInfo_Click"/>
+          </WrapPanel>
+        </Border>
+
+      </Grid>
+    </ScrollViewer>
+
+  </DockPanel> 
 </UserControl>

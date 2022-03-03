@@ -86,9 +86,10 @@
             </Label>
           </WrapPanel>
         </Border>
+        <!-- <This is where ticket list displays> -->
         <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
           <WrapPanel Background="White" HorizontalAlignment="Stretch">
-         
+            <Button Content="Click Ticket Info" Click="TicketInfo_Click"/>
           </WrapPanel>
         </Border>
 
