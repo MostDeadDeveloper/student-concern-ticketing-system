@@ -21,12 +21,12 @@
 
     <!-- Panel for Content  -->
     <StackPanel DockPanel.Dock="Left" Background="LightBlue">
-        <Label Content="Add New Service-Level Agreement (SLA)" />
-        <Label Content="SLA Name:" />
-        <TextBox />
-        <Label Content="Description:" />
-        <TextBox />
-        <Label Content="Ticket Priority" />
+        <Label Content="Add New Service-Level Agreement (SLA)" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Label Margin="10" Content="SLA Name:" />
+        <TextBox Width="500" Margin="10, 0, 0, 0" HorizontalAlignment="Left"/>
+        <Label Margin="10" Content="Description:" />
+        <TextBox Width="500" Margin="10, 0, 0, 0" HorizontalAlignment="Left"/>
+        <Label Margin="10" Content="Ticket Priority" />
         <Grid Background="LightGray">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -43,19 +43,19 @@
           <Label Grid.Row="0" Grid.Column="1" Content="First Response (in hours):" />
           <Label Grid.Row="0" Grid.Column="2" Content="Ticket Duration (in hours):" />
           <Label Grid.Row="1" Grid.Column="0" Content="Urgent" />
-          <TextBox Grid.Row="1" Grid.Column="1"/>
-          <TextBox Grid.Row="1" Grid.Column="2"/>
+          <TextBox Grid.Row="1" Grid.Column="1" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBox Grid.Row="1" Grid.Column="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Label Grid.Row="2" Grid.Column="0" Content="Low Priority" />
-          <TextBox Grid.Row="2" Grid.Column="1"/>
-          <TextBox Grid.Row="2" Grid.Column="2"/>
+          <TextBox Grid.Row="2" Grid.Column="1" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBox Grid.Row="2" Grid.Column="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Label Grid.Row="3" Grid.Column="0" Content="Medium Priority" />
-          <TextBox Grid.Row="3" Grid.Column="1"/>
-          <TextBox Grid.Row="3" Grid.Column="2"/>
+          <TextBox Grid.Row="3" Grid.Column="1" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBox Grid.Row="3" Grid.Column="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Label Grid.Row="4" Grid.Column="0" Content="High Priority" />
-          <TextBox Grid.Row="4" Grid.Column="1"/>
-          <TextBox Grid.Row="4" Grid.Column="2"/>
+          <TextBox Grid.Row="4" Grid.Column="1" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBox Grid.Row="4" Grid.Column="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Button Content="Create"/>
+        <Button Margin="10" Content="Create" HorizontalAlignment="Center"/>
     </StackPanel>
 
  </DockPanel> 
