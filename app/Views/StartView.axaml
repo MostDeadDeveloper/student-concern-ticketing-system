@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+             x:Class="app.Views.StartView">
+
+  <UserControl.Background>
+      <ImageBrush Source="/Assets/welcome-page.png"/>
+  </UserControl.Background>
+
+  <DockPanel HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+    <DockPanel.Styles>
+      <!-- Style settings of profile button -->
+      <Style Selector="Button.StartBtn">
+          <Setter Property="Width" Value="100" />
+          <Setter Property="Height" Value="50" />
+          <Setter Property="BorderThickness" Value="0" />
+
+          <!-- Set a background -->
+          <Setter Property="Background">
+            <Setter.Value>
+                          <!-- img src  -->
+              <ImageBrush Source="/Assets/start.png" />
+            </Setter.Value>
+          </Setter>
+      </Style>
+    </DockPanel.Styles>
+    <!-- <TextBlock DockPanel.Dock="Top" Text="{Binding Start}" Margin="5">
+      This is Start View
+    </TextBlock> -->
+  <Label Content="Iskolar Help" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="100" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+  <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Classes="StartBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+  </DockPanel>
+</UserControl>

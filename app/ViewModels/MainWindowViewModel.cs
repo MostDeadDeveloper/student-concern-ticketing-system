@@ -8,9 +8,18 @@ namespace app.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {
+        public Database connection;
+        ViewModelBase content;
+
         public MainWindowViewModel(Database db)
         {
-            Content = List = new TicketListViewModel(db.GetItems());
+            List = new TicketListViewModel(db.GetItems());
+
+            // provide a database connection to everyone, a very safety hazard pero hey
+            // nobody cares.
+            connection = db;
+
+            HomeView();
         }
 
         public TicketListViewModel List { get; }
@@ -20,21 +29,29 @@ namespace app.ViewModels
             // do something
         }
 
-        ViewModelBase content;
         public ViewModelBase Content
         {
             get => content;
             private set => this.RaiseAndSetIfChanged(ref content, value);
         }
 
+        public void StartView()
+        {
+            Content = new StartViewModel();
+        }
         public void HomeView()
         {
             Content = new HomeViewModel();
         }
 
-        public void TicketView()
+        public void StaffTicketView()
         {
-            //do something
+            Content = new StaffTicketViewModel(connection.GetItems());
+        }
+
+        public void AdminTicketView()
+        {
+            Content = new AdminTicketViewModel(connection.GetItems());
         }
 
         public void ReportView()
@@ -50,6 +67,60 @@ namespace app.ViewModels
         public void SignupView()
         {
             Content = new SignupViewModel();
+        }
+
+        public void AdminSettingView()
+        {
+            Content = new AdminSettingViewModel();
+        }
+
+        public void StaffSettingView()
+        {
+            Content = new StaffSettingViewModel();
+        }
+
+        public void ProfileView()
+        {
+            Content = new ProfileViewModel();
+        }
+
+        public void AdminSLAManageView()
+        {
+            Content = new AdminSLAManageViewModel();
+        }
+
+        public void AdminUserManageView()
+        {
+            Content = new AdminUserManageViewModel();
+        }
+
+        public void AdminAddUserView()
+        {
+            Content = new AdminAddUserViewModel();
+        }
+
+        public void AdminEditUserView()
+        {
+            Content = new AdminEditUserViewModel();
+        }
+
+        public void AdminAddSLAView()
+        {
+            Content = new AdminAddSLAViewModel();
+        }
+
+        public void AdminEditSLAView()
+        {
+            Content = new AdminEditSLAViewModel();
+        }
+        public void AdminTicketInfoView()
+        {
+            Content = new AdminTicketInfoViewModel();
+        }
+
+        public void OnClickDDMenu()
+        {
+            Content = new TopMenubarViewModel();
         }
     }
 }

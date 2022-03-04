@@ -1,10 +1,11 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:app.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
              x:Class="app.Views.TopMenubar">
-
+    
   <WrapPanel HorizontalAlignment="Right">
     <WrapPanel.Styles>
       <!-- Style settings of search button -->
@@ -35,7 +36,7 @@
             </Setter.Value>
           </Setter>
       </Style>
-       <!-- Style settings of profile button -->
+      <!-- Style settings of profile button -->
       <Style Selector="Button.ProfileBtn">
           <Setter Property="Width" Value="50" />
           <Setter Property="Height" Value="50" />
@@ -45,13 +46,21 @@
           <Setter Property="Background">
             <Setter.Value>
                           <!-- img src  -->
-              <ImageBrush Source="/Assets/profile.png" />
+              <ImageBrush Source="/Assets/user.png" />
             </Setter.Value>
           </Setter>
       </Style>
       </WrapPanel.Styles>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding OnClickCommand}" />
-    <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding OnClickCommand}"/>
-    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn" Command="{Binding $parent[Window].DataContext.LoginView}"/>
+    <Label DockPanel.Dock="Right" x:Name="lbltracker" Content="NoEvent"/>
+    <Button DockPanel.Dock="Right" Margin="10" Classes="SearchBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}" />
+    <Button DockPanel.Dock="Right" Margin="10" Classes="NotifBtn" Command="{Binding $parent[Window].DataContext.OnClickCommand}"/>
+    <Button DockPanel.Dock="Right" Margin="10" Classes="ProfileBtn">
+      <ComboBox x:Name="ProfileDDMenu"  SelectedIndex="0" IsVisible="True" Opacity="0">
+            <ComboBoxItem>Inbox</ComboBoxItem>
+            <ComboBoxItem>Account Profile</ComboBoxItem>
+            <ComboBoxItem>Sign out</ComboBoxItem>
+      </ComboBox>
+    </Button>
   </WrapPanel>
+
 </UserControl>

@@ -1,0 +1,57 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:app.ViewModels"
+             xmlns:views="using:app.Views"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+             x:Class="app.Views.AdminAddUserView">
+ <DockPanel>
+    <!-- Panel for Menubar  -->
+      <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
+          <views:TopMenubar/>
+      </StackPanel>
+
+      <!-- Panel for Sidebar  -->
+    <Border Background="White" Padding="16">
+      <StackPanel Spacing="5" Width="80" Background="White" DockPanel.Dock="Left">
+          <views:NavigationSidebar/>
+      </StackPanel>
+    </Border>
+
+    <!-- Panel for Content  -->
+    <Grid DockPanel.Dock="Left" ShowGridLines="False" Background="LightBlue">
+      <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"></ColumnDefinition>
+          <ColumnDefinition Width="Auto"></ColumnDefinition>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="100"/>
+          <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Label Content="Add User" Grid.Row="0" Grid.Column="0" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <Label Content="Username:" Grid.Row="1" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="1" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Label Content="Password:" Grid.Row="2" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="2" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Label Content="Role:" Grid.Row="3" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="3" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Label Content="Name:" Grid.Row="4" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="4" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Label Content="Email:" Grid.Row="5" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="5" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Label Content="Contact Number:" Grid.Row="6" Grid.Column="0" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+      <TextBox Grid.Row="6" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Button Content="Create" Grid.Row="8" Grid.Column="2"/>
+    </Grid>
+
+ </DockPanel> 
+</UserControl>

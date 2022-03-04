@@ -1,0 +1,58 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:app.ViewModels"
+             xmlns:views="using:app.Views"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+             x:Class="app.Views.ProfileView">
+ <DockPanel>
+    <!-- Panel for Menubar  -->
+      <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
+          <views:TopMenubar/>
+      </StackPanel>
+
+      <!-- Panel for Sidebar  -->
+    <Border Background="White" Padding="16">
+      <StackPanel Spacing="5" Width="80" Background="White" DockPanel.Dock="Left">
+          <views:NavigationSidebar/>
+      </StackPanel>
+    </Border>
+
+    <!-- Panel for Content  -->
+    <Grid DockPanel.Dock="Left" ShowGridLines="False" Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Rectangle Stroke="LightBlue" Width="150" Height="150" Margin="40" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4">
+           <Rectangle.Fill> 
+              <ImageBrush Source="/Assets/rsz_profile.png" Stretch="Fill"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Name" Grid.Row="0" Grid.Column="1" Margin="20, 40, 0, 5" FontSize="22" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Label Content="Role/Title" Grid.Row="1" Grid.Column="1" Margin="22, 5, 0, 5" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
+        <Label Content="Username:" Grid.Row="3" Grid.Column="1" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
+        <Label Content="Password:" Grid.Row="4" Grid.Column="1" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
+        <Label Content="Email:" Grid.Row="5" Grid.Column="1" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
+        <Label Content="Contact Number:" Grid.Row="6" Grid.Column="1" Margin="0, 10, 10, 10" HorizontalAlignment="Right" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto" />
+        <TextBox x:Name="txtUsername" Grid.Row="3" Grid.Column="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox x:Name="txtPassword" Grid.Row="4" Grid.Column="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox x:Name="txtEmail" Grid.Row="5" Grid.Column="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox x:Name="txtContact" Grid.Row="6" Grid.Column="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Button Content="Edit Profile" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" />
+    </Grid>
+ </DockPanel> 
+</UserControl>

@@ -1,13 +1,132 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:app.ViewModels"
+             xmlns:views="using:app.Views"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
              x:Class="app.Views.HomeView">
-  <DockPanel>
-    <Label  HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            x:Name="{Binding Home}"
-            Content="This is the Home View"/>
-  </DockPanel>
+             
+  <DockPanel Background="LightBlue">
+    <!-- Panel for Menubar  -->
+      <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
+          <views:TopMenubar/>
+      </StackPanel>
+
+      <!-- Panel for Sidebar  -->
+    <Border Background="White" Padding="16">
+      <StackPanel Spacing="5" Width="80" Background="White" DockPanel.Dock="Left">
+          <views:NavigationSidebar/>
+      </StackPanel>
+    </Border>
+
+    <!-- Panel for Content  -->
+      <RelativePanel DockPanel.Dock="Top" HorizontalAlignment="Center" Background="LightBlue">
+        <RelativePanel.Styles>
+           <!-- Style settings of left button -->
+            <Style Selector="Button.CreateTicketBtn">
+                <Setter Property="Width" Value="132" />
+                <Setter Property="Height" Value="22" />
+                <Setter Property="BorderThickness" Value="0" />
+
+                <!-- Set a background -->
+                <Setter Property="Background">
+                  <Setter.Value>
+                                <!-- img src  -->
+                    <ImageBrush Source="/Assets/create-ticket.png" />
+                  </Setter.Value>
+                </Setter>
+            </Style>
+        </RelativePanel.Styles>
+        <Rectangle x:Name="RecHeader" HorizontalAlignment="Center" Stroke="LightBlue" Width="760" Height="80">
+           <Rectangle.Fill> 
+              <ImageBrush Source="/Assets/header.png" Stretch="Fill"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Margin="5" Padding="25" Foreground="White" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Sansation_Regular.ttf#Sansation">
+              Good Day, Admin!
+        </TextBlock>
+        <Label RelativePanel.Below="RecHeader" x:Name="LblCurTicket" Margin="10" Padding="20" FontSize="20" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto">
+          Current Tickets
+        </Label>
+        <Button RelativePanel.Below="RecHeader" RelativePanel.AlignRightWith="RecHeader" Name="CreateTicket" Classes="CreateTicketBtn" Margin="30" Click="CreateTicket_Click"/>
+        
+        <Grid RelativePanel.Below="LblCurTicket" x:Name="grdMiddle" MaxWidth="600" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+          <Grid.Styles>
+            <!-- Style settings of left button -->
+            <Style Selector="Button.LeftBtn">
+                <Setter Property="Width" Value="30" />
+                <Setter Property="Height" Value="30" />
+                <Setter Property="BorderThickness" Value="0" />
+
+                <!-- Set a background -->
+                <Setter Property="Background">
+                  <Setter.Value>
+                                <!-- img src  -->
+                    <ImageBrush Source="/Assets/left-arrow.png" />
+                  </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- Style settings of right button -->
+            <Style Selector="Button.RightBtn">
+                <Setter Property="Width" Value="30" />
+                <Setter Property="Height" Value="30" />
+                <Setter Property="BorderThickness" Value="0" />
+
+                <!-- Set a background -->
+                <Setter Property="Background">
+                  <Setter.Value>
+                                <!-- img src  -->
+                    <ImageBrush Source="/Assets/right-arrow.png" />
+                  </Setter.Value>
+                </Setter>
+            </Style>
+          </Grid.Styles>
+          <Button Name="left" Classes="LeftBtn" Grid.Column="0" VerticalAlignment="Center" Padding="10,20" Margin="4">
+          </Button>
+          <Carousel  Grid.Column="1" x:Name="carousel" Width="500">
+            <Carousel.PageTransition>
+              <PageSlide Duration="0.25" Orientation="Horizontal" />
+            </Carousel.PageTransition>
+            <TextBlock Width="100" Height="100" Background="DarkRed" Text="Urgent" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Open" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Ongoing" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="DarkOrange" Text="Overdue" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Unassigned" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="High Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Medium Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Low Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+          </Carousel>
+          <Button Name="right" Classes="RightBtn" Grid.Column="6" VerticalAlignment="Center" Padding="10,20" Margin="4">
+          </Button>
+        </Grid>
+
+        <Label RelativePanel.Below="grdMiddle" x:Name="LblAlerts" Margin="10" Padding="20" FontSize="20" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto">
+          Recent Alerts
+        </Label>
+
+        <Grid RelativePanel.Below="LblAlerts" x:Name="grdBottom" RowDefinitions="Auto,*,Auto" MaxWidth="600" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+          <!-- <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True"> -->
+          <Border BorderBrush="Black" BorderThickness="1">
+            <ListBox Items="{Binding MyItems}">
+              <ListBox.ItemTemplate>
+                  <DataTemplate>
+                      <Border Background="Red" CornerRadius="4" Padding="4">
+                          <TextBlock Text="{Binding}"/>
+                      </Border>
+                  </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+          </Border>
+          <!-- </ScrollViewer> -->
+        </Grid>
+
+      </RelativePanel>
+  
+  </DockPanel> 
 </UserControl>

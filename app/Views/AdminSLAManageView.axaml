@@ -1,0 +1,58 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:app.ViewModels"
+             xmlns:views="using:app.Views"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+             x:Class="app.Views.AdminSLAManageView">
+ <DockPanel>
+    <!-- Panel for Menubar  -->
+      <StackPanel Spacing="10" Height="80" Background="LightBlue" DockPanel.Dock="Top">
+          <views:TopMenubar/>
+      </StackPanel>
+
+      <!-- Panel for Sidebar  -->
+    <Border Background="White" Padding="16">
+      <StackPanel Spacing="5" Width="80" Background="White" DockPanel.Dock="Left">
+          <views:NavigationSidebar/>
+      </StackPanel>
+    </Border>
+
+    <!-- Panel for Content  -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True">
+      <Grid DockPanel.Dock="Left" ShowGridLines="False" Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="SLA Management" Margin="20, 20, 50, 20" Grid.Row="0" Grid.Column="0" FontSize="24" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Button Content="Add New SLA" Grid.Row="0" Grid.Column="1" Command="{Binding $parent[Window].DataContext.AdminAddSLAView}"/>
+        <Label Content="SLA" Margin="30, 10, 0, 10" Grid.Row="1" Grid.Column="0" FontSize="24" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto"/>
+        <Border Background="White" Margin="10" Padding="20" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+          <StackPanel>
+            <WrapPanel>
+              <Label Content="#" />
+              <Label Content="Name" />
+              <Label Content="Description" />
+              <Label Content="Action" />
+            </WrapPanel>
+            <WrapPanel>
+              <Label Content="01" />
+              <Label Content="Sample" />
+              <Label Content="Sample Description" />
+              <Button Content="Edit" Command="{Binding $parent[Window].DataContext.AdminEditSLAView}"/>
+              <Button Content="Delete" />
+            </WrapPanel>
+          </StackPanel>
+        </Border>
+      </Grid>
+    </ScrollViewer>
+
+ </DockPanel> 
+</UserControl>
