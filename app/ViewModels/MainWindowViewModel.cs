@@ -8,7 +8,8 @@ namespace app.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {
-        public Database connection; 
+        public Database connection;
+        ViewModelBase content;
 
         public MainWindowViewModel(Database db)
         {
@@ -18,7 +19,7 @@ namespace app.ViewModels
             // nobody cares.
             connection = db;
 
-            StartView();
+            HomeView();
         }
 
         public TicketListViewModel List { get; }
@@ -28,8 +29,6 @@ namespace app.ViewModels
             // do something
         }
 
-        ViewModelBase content;
-        
         public ViewModelBase Content
         {
             get => content;
@@ -52,7 +51,7 @@ namespace app.ViewModels
 
         public void AdminTicketView()
         {
-            Content = new AdminTicketViewModel();
+            Content = new AdminTicketViewModel(connection.GetItems());
         }
 
         public void ReportView()
@@ -113,6 +112,10 @@ namespace app.ViewModels
         public void AdminEditSLAView()
         {
             Content = new AdminEditSLAViewModel();
+        }
+        public void AdminTicketInfoView()
+        {
+            Content = new AdminTicketInfoViewModel();
         }
 
         public void OnClickDDMenu()
