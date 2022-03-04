@@ -74,22 +74,22 @@
         <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
           <WrapPanel Background="White" HorizontalAlignment="Stretch">
             <Label Margin="60, 20, 20, 20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              Ticket #
+              Ticket Name
             </Label>
             <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              Last Update Date
+                Status
             </Label>
             <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              Subject
+                Priority
             </Label>
             <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              User
+              View Data
             </Label>
             <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              Priority
+              Edit Data
             </Label>
             <Label Margin="20" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Regular.ttf#Roboto">
-              Asigned To
+              Edit Data
             </Label>
           </WrapPanel>
         </Border>
@@ -102,9 +102,10 @@
                         <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto" ShowGridLines="False">
                             <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding TicketName}" Grid.Column="0" FontSize="16" FontStyle="Normal"/>
                             <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding Status}" Grid.Column="1"  FontSize="16" FontStyle="Normal"/>
-                            <Button Margin="20" Grid.Row="0" Grid.Column="3"> Edit Data </Button>
-                            <Button Margin="20" Grid.Row="0" Grid.Column="4"> Delete Data </Button>
-                            <Button Grid.Row="0"  Grid.Column="5" Content="Click Ticket Info" Click="TicketInfo_Click"/>
+                            <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding Priority}" Grid.Column="2"  FontSize="16" FontStyle="Normal"/>
+                            <Button Margin="20" Grid.Row="0" Grid.Column="4"> Edit Data </Button>
+                            <Button Margin="20" Grid.Row="0"  Grid.Column="5" Content="Click Ticket Info" Click="TicketInfo_Click"/>
+
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

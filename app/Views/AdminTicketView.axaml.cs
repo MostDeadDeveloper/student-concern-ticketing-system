@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
+using app.ViewModels;
 
 namespace app.Views
 {
@@ -17,12 +18,12 @@ namespace app.Views
             AvaloniaXamlLoader.Load(this);
         }
 
-        private void CreateTicket_Click(object sender, RoutedEventArgs e){
+        private void CreateTicket_Click(object sender, RoutedEventArgs e) { 
                 Window CreateTicket = new CreateTicketView();
                 CreateTicket.Show();
         }
 
-        private void TicketInfo_Click(object sender, RoutedEventArgs e){
+        private void TicketInfo_Click(object sender, RoutedEventArgs e) {
                 Window TicketInfo = new AdminTicketInfoView();
                 TicketInfo.Show();
         }
