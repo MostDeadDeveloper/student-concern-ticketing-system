@@ -93,10 +93,14 @@
             <Carousel.PageTransition>
               <PageSlide Duration="0.25" Orientation="Horizontal" />
             </Carousel.PageTransition>
-            <Rectangle Width="100" Height="100" Fill="White" />
-            <Rectangle Width="100" Height="100" Fill="Red" />
-            <Rectangle Width="100" Height="100" Fill="Blue" />
-            <Rectangle Width="100" Height="100" Fill="Gray" />
+            <TextBlock Width="100" Height="100" Background="DarkRed" Text="Urgent" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Open" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Ongoing" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="DarkOrange" Text="Overdue" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Unassigned" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="High Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Medium Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
+            <TextBlock Width="100" Height="100" Background="White" Text="Low Priority" TextAlignment="Center" FontSize="16" FontStyle="Normal" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto"/>
           </Carousel>
           <Button Name="right" Classes="RightBtn" Grid.Column="6" VerticalAlignment="Center" Padding="10,20" Margin="4">
           </Button>
@@ -107,6 +111,7 @@
         </Label>
 
         <Grid RelativePanel.Below="LblAlerts" x:Name="grdBottom" RowDefinitions="Auto,*,Auto" MaxWidth="600" HorizontalAlignment="Stretch" Margin="0 16 0 0">
+          <!-- <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="True"> -->
           <Border BorderBrush="Black" BorderThickness="1">
             <ListBox Items="{Binding MyItems}">
               <ListBox.ItemTemplate>
@@ -118,9 +123,10 @@
               </ListBox.ItemTemplate>
             </ListBox>
           </Border>
+          <!-- </ScrollViewer> -->
         </Grid>
 
       </RelativePanel>
-  </DockPanel> 
   
+  </DockPanel> 
 </UserControl>
