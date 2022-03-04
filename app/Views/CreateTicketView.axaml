@@ -66,7 +66,7 @@
                 Description
             </Label>
             <TextBox Grid.Row="9" Grid.Column="0"  Grid.ColumnSpan="3" x:Name="txtDescription" TextWrapping="Wrap" Margin="0, 0, 20, 0" Background="LightGray"/>
-            <Button Grid.Row="10" Grid.Column="2" Content="SUBMIT" Margin="10" Background="DarkRed" Foreground="White" FontSize="22" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto" />
+            <Button Grid.Row="10" Grid.Column="2" Content="SUBMIT" Margin="10" Background="DarkRed" Foreground="White" FontSize="22" FontStyle="Normal" FontWeight="Bold" FontFamily="/Assets/Fonts/Roboto-Bold.ttf#Roboto" Command="{Binding SaveChanges}" />
         </Grid>
 
     </Panel>

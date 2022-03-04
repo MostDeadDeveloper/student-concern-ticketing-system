@@ -95,8 +95,21 @@
         </Border>
         <!-- <This is where ticket list displays> -->
         <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
-          <WrapPanel Background="White" HorizontalAlignment="Stretch">
-            <Button Content="Click Ticket Info" Click="TicketInfo_Click"/>
+        <WrapPanel Background="White" HorizontalAlignment="Stretch">
+            <ItemsControl Items="{Binding Tickets}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto" ShowGridLines="False">
+                            <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding TicketName}" Grid.Column="0" FontSize="16" FontStyle="Normal"/>
+                            <TextBlock Margin="60, 20, 20, 20" Grid.Row="0" Text="{Binding Status}" Grid.Column="1"  FontSize="16" FontStyle="Normal"/>
+                            <Button Margin="20" Grid.Row="0" Grid.Column="3"> Edit Data </Button>
+                            <Button Margin="20" Grid.Row="0" Grid.Column="4"> Delete Data </Button>
+                            <Button Grid.Row="0"  Grid.Column="5" Content="Click Ticket Info" Click="TicketInfo_Click"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
           </WrapPanel>
         </Border>
 

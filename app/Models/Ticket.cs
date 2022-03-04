@@ -11,6 +11,8 @@ namespace app.Models
         public bool IsAdmin {get; set;}
         public string name {get; set;}
         public int age {get; set;}
+        public string username {get; set;}
+        public string password {get; set;}
 
         public ICollection<Ticket> Tickets { get; set;}
 
